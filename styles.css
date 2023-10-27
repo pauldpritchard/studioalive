@@ -250,6 +250,8 @@ hr {
   position: relative;
   background: #06050a;
   overflow: hidden;
+  color: #fff;
+  text-decoration: none;
 }
 .contact video {
   width: 100vw;
@@ -263,7 +265,7 @@ hr {
   z-index: 1;
 }
 .contact .text {
-  font-weight: bold;
+  -webkit-text-stroke: 3px #fff;
   margin-top: -43px;
   z-index:2;
 }
