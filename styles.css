@@ -45,6 +45,12 @@ body {
 .intro .text {
   padding-bottom: 0;
 }
+.amoeba {
+  position: absolute;
+  width: 36px;
+  margin-top: 11px;
+  margin-left: -26px;
+}
 
 .footer .text {
   padding-top: 0;
