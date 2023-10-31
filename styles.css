@@ -71,6 +71,10 @@ hr {
 /* === Mobile adjustments === */
 
 @media screen and (orientation: portrait) {
+  .text {
+    font-size: 104px;
+    padding: 12vw 8.5vw;
+  }
   hr {
     margin: 12vw 0;
     background-image:url(divider-mobile.gif);
@@ -196,7 +200,7 @@ hr {
 }
 @media screen and (orientation: portrait) {
     :root {
-        --shrink-to: 54dvh
+        --shrink-to: 49dvh
     }
 }
 
@@ -326,10 +330,6 @@ hr {
 /* === Mobile adjustments === */
 
 @media screen and (orientation: portrait) {
-  .text {
-    font-size: 114px;
-    padding: 12vw 8.5vw;
-  }
   .grid {
     width: auto;
     gap: 12vw;
