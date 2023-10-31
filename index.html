@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" media="screen, projection" href="styles.css" />
 </head>
 
-<body class="theme-0">
+<body onload="setupVideos()">
 
   <!-- ============= LOADER ============== -->
 
@@ -113,19 +113,21 @@
   </a>
 
   <script type="text/javscript">
-    /* Responsive video swapping */
+    function setupVideos() {
+      /* Responsive video swapping */
 
-    if (screen.availHeight > screen.availWidth) {
-      video_src = 'bg1-mobile-15fps.mp4'; /* Portrait */
-    } else {
-      video_src = 'bg1-desktop-15fps.mp4'; /* Landscape */
-    }
+      if (screen.availHeight > screen.availWidth) {
+        video_src = 'bg1-mobile-15fps.mp4'; /* Portrait */
+      } else {
+        video_src = 'bg1-desktop-15fps.mp4'; /* Landscape */
+      }
 
-    const elements = document.getElementsByClassName("video-source");
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].src = video_src;
-      elements[i].parentElement.load();
-      elements[i].parentElement.play();
+      const elements = document.getElementsByClassName("video-source");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].src = video_src;
+        elements[i].parentElement.load();
+        elements[i].parentElement.play();
+      }
     }
   </script>
 
