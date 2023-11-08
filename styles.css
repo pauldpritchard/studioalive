@@ -37,13 +37,6 @@ body {
 	font-size: 103px;
 }
 
-p.small {
-  font-size: 41px;
-  letter-spacing: -0.04em;
-  line-height: 1.2em;
-  max-width: 650px;
-}
-
 .intro {
   display: flex;
   align-items: center;
@@ -250,12 +243,18 @@ hr {
 /* FOOTER
 ======================================================================================== */
 
-@media screen and (orientation: landscape) {
-.left {
-  width: 45%;
+p {
+  margin-top: 0;
 }
-.right {
+p.small {
+  font-size: 41px;
+  letter-spacing: -0.04em;
+  line-height: 1.2em;
+  max-width: 650px;
+}
 
+p.medium {
+  font-size: 105px;
 }
 
 .contact {
@@ -287,6 +286,45 @@ hr {
   -webkit-text-stroke: 3px #fff;
   margin-top: -43px;
   z-index:2;
+}
+
+/* === Desktop 2-column layout === */
+
+@media screen and (orientation: landscape) {
+  .footer {
+    padding: 7vw;
+  }
+  .left {
+    width: 45%;
+    display: inline-block;
+  }
+  .right {
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 17%;
+  }
+  .medium {
+    font-size: 65px;
+    line-height: 1em;
+  }
+  .contact {
+    margin: 6vw 0 8vw;
+    width: 100%;
+    height: 137px;
+    border: 7px solid #fff;
+  }
+  .contact video {
+    width: 100%;
+    height: 200px;
+  }
+  .contact .text {
+    font-size: 63px;
+    letter-spacing: -0.02em;
+    padding: 0;
+    -webkit-text-stroke: 2px #fff;
+    margin-top: -31px;
+  }
 }
 
 
