@@ -243,6 +243,10 @@ hr {
 /* FOOTER
 ======================================================================================== */
 
+.footer {
+  padding: 2vw 8.5vw 12vw 8.5vw;
+}
+
 p {
   margin-top: 0;
 }
@@ -250,7 +254,6 @@ p.small {
   font-size: 41px;
   letter-spacing: -0.04em;
   line-height: 1.2em;
-  max-width: 650px;
 }
 
 p.medium {
@@ -258,7 +261,7 @@ p.medium {
 }
 
 .contact {
-  margin: 0px 8vw 8vw;
+  margin: 0;
   width: 700px;
   height: 200px;
   border: 10px solid #fff;
@@ -284,9 +287,24 @@ p.medium {
 }
 .contact .text {
   -webkit-text-stroke: 3px #fff;
-  margin-top: -43px;
+  margin-top: 62px;
   z-index:2;
 }
+
+/* === Mobile adjustments === */
+
+@media screen and (orientation: portrait) {
+  .footer {
+    padding: 2vw 8.5vw 12vw 8.5vw;
+  }
+  p.small {
+    font-size: 55px;
+  }
+  p.medium {
+    margin-top: 110px;
+  }
+}
+
 
 /* === Desktop 2-column layout === */
 
@@ -304,7 +322,7 @@ p.medium {
     vertical-align: top;
     margin-left: 17%;
   }
-  .medium {
+  p.medium {
     font-size: 65px;
     line-height: 1em;
   }
@@ -368,7 +386,7 @@ p.medium {
   width: 88%;
   align-self: center;
 }
-.medium {
+.grid .medium {
   width: 66%;
   margin-left: 5vw;
 }
@@ -407,7 +425,7 @@ p.medium {
   .desktop {
     width: 100%;
   }
-  .medium {
+  .grid .medium {
     width: 88%;
     margin-left: 0;
   }
