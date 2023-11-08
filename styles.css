@@ -37,6 +37,13 @@ body {
 	font-size: 103px;
 }
 
+p.small {
+  font-size: 41px;
+  letter-spacing: -0.04em;
+  line-height: 1.2em;
+  max-width: 650px;
+}
+
 .intro {
   display: flex;
   align-items: center;
@@ -74,6 +81,11 @@ hr {
   .text {
     font-size: 104px;
     padding: 12vw 8.5vw;
+  }
+  p.small {
+    font-size: 55px;
+    letter-spacing: -0.04em;
+    line-height: 1.3em;
   }
   hr {
     margin: 12vw 0;
@@ -237,6 +249,14 @@ hr {
 
 /* FOOTER
 ======================================================================================== */
+
+@media screen and (orientation: landscape) {
+.left {
+  width: 45%;
+}
+.right {
+
+}
 
 .contact {
   margin: 0px 8vw 8vw;
