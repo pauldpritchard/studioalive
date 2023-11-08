@@ -104,7 +104,7 @@
       <hr />
       <p class="small">Studio Alive is the small agency practice of Paul Pritchard.</p>
       <p class="small">Paul has designed and managed at unicorn startup Shopify before and during its IPO, has founded and sold two ecommerce companies, and is now working directly with companies he believes in.</p>
-      
+
       books open<br />for 2024
     </div>
   </div>
@@ -129,6 +129,9 @@
         elements[i].src = video_src;
         elements[i].parentElement.load();
         elements[i].parentElement.play();
+        elements[i].addEventListener('loadeddata', function() {
+          this.classList.add('loaded');
+        }, false);
       }
   </script>
 
