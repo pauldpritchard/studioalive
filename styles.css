@@ -201,11 +201,11 @@ hr {
 }
 
 :root {
-    --shrink-to: 72dvh
+    --shrink-to: 70dvh
 }
 @media screen and (orientation: portrait) {
     :root {
-        --shrink-to: 53dvh
+        --shrink-to: 61dvh
     }
 }
 
