@@ -129,7 +129,7 @@
         elements[i].src = video_src;
         elements[i].parentElement.load();
         elements[i].parentElement.play();
-        elements[i].addEventListener('loadeddata', function() {
+        elements[i].parentElement.addEventListener('loadeddata', function() {
           this.classList.add('loaded');
         }, false);
       }
