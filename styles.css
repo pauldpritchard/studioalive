@@ -260,13 +260,25 @@ hr {
   }
 }
 
+.streamline-hype .positioner {
+  overflow: hidden;
+  position: absolute;
+  width: 70.4vw;
+  margin-top: 50%;
+}
 .streamline-hype .scrolling-text {
   position: absolute;
   background: #fff;
-  font-size: 40px;
+  font-size: 57px;
   font-family: sans-serif;
   text-transform: uppercase;
   color: #000;
+}
+@media screen and (orientation: portrait) {
+  .streamline-hype .positioner {
+    width: 100vw;
+    margin-top: 70%;
+  }
 }
 
 
