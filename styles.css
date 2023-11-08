@@ -267,11 +267,12 @@ hr {
   margin-top: 50%;
 }
 .streamline-hype .scrolling-text {
-  position: absolute;
   background: #fff;
   font-size: 57px;
   font-family: sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.01em;
   color: #000;
 }
 @media screen and (orientation: portrait) {
