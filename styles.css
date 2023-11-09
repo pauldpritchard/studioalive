@@ -211,7 +211,7 @@ hr {
 
 @keyframes fade-in-shrink {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: scale(1.5);
   }
   50% {
