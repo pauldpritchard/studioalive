@@ -140,14 +140,14 @@ hr {
   z-index: 10;
   background: #06050a;
   overflow: hidden;
-  animation: shrink 3s forwards normal 1.4s cubic-bezier(0.25, 0.33, 0.11, 0.99);
+  animation: shrink 3s forwards normal 1.9s cubic-bezier(0.25, 0.33, 0.11, 0.99);
 }
 .header .logo {
   animation: flip-vertical-in 1.3s forwards normal 2.6s;
 }
 .header video {
   opacity: 0;
-  animation: fade-in-shrink 3s forwards normal 1.4s cubic-bezier(0.25, 0.33, 0.11, 0.99);
+  animation: fade-in-shrink 3s forwards normal 1.9s cubic-bezier(0.25, 0.33, 0.11, 0.99);
 }
 
 .background-video {
@@ -214,7 +214,7 @@ hr {
     opacity: 0;
     transform: scale(2.5);
   }
-  75% {
+  60% {
     opacity: 1;
     height: 100dvh;
     animation-timing-function: cubic-bezier(0.36, 0, 0.11, 0.99);
@@ -229,7 +229,7 @@ hr {
   0% {
     height: 100dvh;
   }
-  75% {
+  60% {
         height: 100dvh;
     animation-timing-function: cubic-bezier(0.36, 0, 0.11, 0.99);
   }
