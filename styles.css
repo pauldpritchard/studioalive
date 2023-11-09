@@ -217,7 +217,7 @@ hr {
   50% {
     opacity: 1;
     height: 100dvh;
-    animation-timing-function: cubic-bezier(0.36, 0, 0.11, 0.99);
+    animation-timing-function: cubic-bezier(0.71, 0.13, 0.02, 1);
   }
   100% {
     opacity: 1;
@@ -231,7 +231,7 @@ hr {
   }
   50% {
         height: 100dvh;
-    animation-timing-function: cubic-bezier(0.36, 0, 0.11, 0.99);
+    animation-timing-function: cubic-bezier(0.71, 0.13, 0.02, 1);
   }
   100% {
     height: var(--shrink-to);
@@ -326,6 +326,7 @@ p.medium {
   top: 0;
   bottom: 0;
   z-index: 1;
+  transform: scale(2);
 }
 .contact .text {
   -webkit-text-stroke: 3px #fff;
