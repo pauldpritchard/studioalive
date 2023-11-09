@@ -140,14 +140,14 @@ hr {
   z-index: 10;
   background: #06050a;
   overflow: hidden;
-  animation: shrink 1.8s forwards normal 2.6s cubic-bezier(0.25, 0.33, 0.11, 0.99);
+  animation: shrink 2.6s forwards normal 2.6s cubic-bezier(0.25, 0.33, 0.11, 0.99);
 }
 .header .logo {
   animation: flip-vertical-in 1.3s forwards normal 2.6s;
 }
 .header video {
   opacity: 0;
-  animation: fade-in-shrink 1.8s forwards normal 2.6s cubic-bezier(0.25, 0.33, 0.11, 0.99);
+  animation: fade-in-shrink 2.6s forwards normal 2.6s cubic-bezier(0.25, 0.33, 0.11, 0.99);
 }
 
 .background-video {
