@@ -26,7 +26,7 @@
 
   <div class="intro">
     <div class="text">
-      we bring brands to life with innovative designs <em>that sell</em>.
+      we bring brands to life with innovative designs <em>that work</em>.
       <hr />
     </div>
   </div>
@@ -133,7 +133,7 @@
     <hr />
     <div class="left">
       <p class="small">Studio Alive is the small agency practice of Paul Pritchard.</p>
-      <p class="small">Paul has designed and managed at unicorn startup Shopify before and during its IPO, has founded and sold two ecommerce companies, and is now working directly with companies he believes in.</p>
+      <p class="small">Paul has designed and managed at unicorn startup Shopify before and during its IPO, has founded and sold two ecommerce companies, and is now working directly with brands he believes in.</p>
     </div>
     <div class="right">
       <p class="medium">
@@ -153,17 +153,20 @@
 
       if (screen.availHeight > screen.availWidth) {
         video_src = 'bg2-mobile.mp4'; /* Portrait */
+        poster_src = "bg2-mobile.jpg";
       } else {
         video_src = 'bg2-desktop.mp4'; /* Landscape */
+        poster_src = "bg2-desktop.jpg";
       }
 
       var elements = document.getElementsByClassName("video-source");
       for (let i = 0; i < elements.length; i++) {
         elements[i].src = video_src;
+        elements[i].parentElement.poster = poster_src;
         elements[i].parentElement.load();
         elements[i].parentElement.play();
         elements[i].parentElement.addEventListener('loadeddata', function() {
-          this.classList.add('loaded');
+          document.body.classList.add('intro-loaded');
         }, false);
       }
   </script>
