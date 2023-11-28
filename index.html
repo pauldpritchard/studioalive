@@ -10,7 +10,7 @@
   <!-- ============= LOADER ============== -->
 
   <div class="loader">
-    <img src="logo.gif" class="logo" onload="document.body.classList.add('loader-loaded');" />
+    <img src="logo.gif" class="logo" onload="document.body.classList.add('state-loader-loaded');" />
   </div>
 
   <!-- ============= HEADER ============== -->
@@ -166,7 +166,13 @@
         elements[i].parentElement.load();
         elements[i].parentElement.play();
         elements[i].parentElement.addEventListener('loadeddata', function() {
-          document.body.classList.add('intro-loaded');
+          console.log('Not now...');
+          loader = document.getElementsByClassName('logo')[0];
+          loader.addEventListener('animationiteration', () => {
+            console.log('NOW!');
+            document.body.classList.add('state-intro-loaded');
+          });
+          // document.body.classList.add('state-intro-loaded');
         }, false);
       }
   </script>
