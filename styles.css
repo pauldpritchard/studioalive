@@ -126,11 +126,13 @@ hr {
   justify-content: center;
   z-index: 15;
   perspective: 350px;
-  animation: flip-vertical-out 1.3s forwards normal 1.3s;
 }
 .loader .logo {
-  animation: flip-vertical 1.3s forwards infinite;
   mix-blend-mode: difference;
+  transform: rotateX(-90deg);
+}
+.state-loader-loaded .loader .logo {
+  animation: logo-spin 1.3s forwards infinite;
 }
 
 
@@ -146,13 +148,18 @@ hr {
   z-index: 10;
   background: #06050a;
   overflow: hidden;
-  animation: shrink 2.6s forwards normal 2.4s cubic-bezier(0.25, 0.33, 0.11, 0.99);
 }
-.header .logo {
-  animation: flip-vertical-in 1.3s forwards normal 2.6s;
+.state-intro-loaded .loader {
+  animation: loader-spin-out 1.3s forwards normal 0s;
 }
-.header video {
-  animation: fade-in-shrink 2.6s forwards normal 2.4s cubic-bezier(0.25, 0.33, 0.11, 0.99);
+.state-intro-loaded .header {
+  animation: shrink 2.6s forwards normal 1.3s cubic-bezier(0.25, 0.33, 0.11, 0.99);
+}
+.state-intro-loaded .header .logo {
+  animation: flip-vertical-in 1.3s forwards normal 1.1s;
+}
+.state-intro-loaded .header video {
+  animation: fade-in-shrink 2.6s forwards normal 1.3s cubic-bezier(0.25, 0.33, 0.11, 0.99);
 }
 
 .background-video {
@@ -170,7 +177,7 @@ hr {
 
 /* === Animations === */
 
-@keyframes flip-vertical {
+@keyframes logo-spin {
   0% {
     transform: rotateX(-90deg);
     animation-timing-function: cubic-bezier(0.29, 0.28, 0.32, 1);
@@ -186,7 +193,7 @@ hr {
     transform: rotateX(90deg);
   }
 }
-@keyframes flip-vertical-out {
+@keyframes loader-spin-out {
   75% {
     transform: rotateX(0deg);
     animation-timing-function: cubic-bezier(0.47, 0.48, 1, 0.33);
