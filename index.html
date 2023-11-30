@@ -38,31 +38,31 @@
     <div class="row">
       <div class="item mobile-small">
         <video autoplay loop defaultMuted playsinline muted poster="">
-          <source src="work/drop-blue-mobile.mp4" type="video/mp4">
+          <source data-src="work/drop-blue-mobile.mp4" type="video/mp4" class="lazy">
         </video>
       </div>
       <div class="item mobile-large offset-up mobile-first">
         <video autoplay loop defaultMuted playsinline muted poster="">
-          <source src="work/streamline-luxe-mobile.mp4" type="video/mp4">
+          <source data-src="work/streamline-luxe-mobile.mp4" type="video/mp4" class="lazy">
         </video>
       </div>
     </div>
 
     <div class="item desktop">
         <video autoplay loop defaultMuted playsinline muted poster="">
-          <source src="work/streamline-core-desktop.mp4" type="video/mp4">
+          <source data-src="work/streamline-core-desktop.mp4" type="video/mp4" class="lazy">
         </video>
     </div>
 
     <div class="row align-top">
       <div class="item mobile-large">
         <video autoplay loop defaultMuted playsinline muted poster="">
-          <source src="work/incentivize-mobile.mp4" type="video/mp4">
+          <source data-src="work/incentivize-mobile.mp4" type="video/mp4" class="lazy">
         </video>
       </div>
       <div class="item mobile-small offset-down">
         <video autoplay loop defaultMuted playsinline muted poster="">
-          <source src="work/drop-neon-mobile-recut.mp4" type="video/mp4">
+          <source data-src="work/drop-neon-mobile-recut.mp4" type="video/mp4" class="lazy">
         </video>
       </div>
     </div>
@@ -159,20 +159,29 @@
         poster_src = "bg2-desktop.jpg";
       }
 
-      var elements = document.getElementsByClassName("video-source");
+      var elements = document.getElementsByClassName('video-source');
       for (let i = 0; i < elements.length; i++) {
         elements[i].src = video_src;
         elements[i].parentElement.poster = poster_src;
         elements[i].parentElement.load();
         elements[i].parentElement.play();
+
+        // When intro video is ready
         elements[i].parentElement.addEventListener('loadeddata', function() {
-          console.log('Not now...');
+
+          // Reveal site on next logo spin completion
           loader = document.getElementsByClassName('logo')[0];
           loader.addEventListener('animationiteration', () => {
-            console.log('NOW!');
             document.body.classList.add('state-intro-loaded');
           });
-          // document.body.classList.add('state-intro-loaded');
+
+          // Start loading the rest of the videos
+          var lazy_videos = document.getElementsByClassName('lazy');
+          for (let i = 0; i < lazy_videos.length; i++) {
+            lazy_videos[i].src = lazy_videos[i].dataset.src;
+            lazy_videos[i].parentElement.load();
+            lazy_videos[i].parentElement.play();
+          }
         }, false);
       }
   </script>
