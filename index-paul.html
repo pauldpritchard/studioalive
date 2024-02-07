@@ -92,6 +92,10 @@
       background: url(bg-paul.jpg);
       background-size: cover;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
 
@@ -101,6 +105,9 @@
       perspective: 900;
       animation: marquee-left 8s linear infinite forwards;
       mix-blend-mode: lighten;
+      position: absolute;
+      top: 50%;
+      margin-top: -51px;
     }
 
     .logos span {
@@ -111,6 +118,10 @@
       background: url(//archetypethemes.co/cdn/shop/t/44/assets/scrolling-logos.png?v=139866222502378184131706647132);
       background-size: cover;
       filter: invert(1) contrast(2.5);
+    }
+
+    .examples img {
+      height: 600px;
     }
 
     @keyframes marquee-left {
