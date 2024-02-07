@@ -67,9 +67,9 @@
     }
 
     .two-col {
-      display: flex;
-      gap: 110px;
-      margin-bottom: 70px;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 70px;
     }
     .two-col div:first-child {
     }
@@ -81,7 +81,7 @@
     }
     hr {
       border: none;
-      height: 3px;
+      height: 4px;
       background-color: #fff;
       margin: 70px 0;
     }
@@ -99,7 +99,7 @@
       white-space: nowrap;
       width: auto;
       perspective: 900;
-      animation: marquee-left 50s linear infinite forwards;
+      animation: marquee-left 8s linear infinite forwards;
     }
 
     .logos span {
@@ -124,7 +124,7 @@
 
     .button {
       display: inline-block;
-      background: url(bg-paul.jpg);
+      background: url(bg-paul.jpg) center center;
       padding: 15px 35px 20px;
       font-weight: bold;
       font-size: 25px;
@@ -164,8 +164,6 @@
           <li>Experiential Design</li>
         </ul>
       </div>
-    </div>
-    <div class="two-col">
       <div>Sectors</div>
       <div>
         <ul>
