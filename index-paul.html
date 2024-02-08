@@ -204,7 +204,11 @@
   <div class="work">
     <div class="logos-container"><div class="logos"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
     <div class="examples">
-      <img src="example-paul.jpg" />
+      <div class="example"><img src="example-paul.jpg" /></div>
+      <div class="example"><img src="work/streamline-hype-desktop.jpg" /></div>
+      <div class="example"><img src="work/howe-sound-logo.jpg" /></div>
+      <div class="example"><img src="work/asana-logo.jpg" /></div>
+      <div class="example"><img src="work/lab-logo.jpg" /></div>
     </div>
   </div>
 
@@ -241,6 +245,18 @@
 
 
   <script type="text/javascript">
+    const elements = document.querySelectorAll('.example');
+
+    var current_example = 0;
+
+    function nextExample() {
+      elements[current_example].style.display = 'none';
+      current_example++;
+      if (current_example > elements.length) current_example = 0;
+      elements[current_example].style.display = 'block';
+      window.setTimeout(nextExample,1000);
+    }
+    nextExample();
   </script>
 
 
