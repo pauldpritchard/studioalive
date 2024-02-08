@@ -106,17 +106,17 @@
       align-items: center;
       overflow: hidden;
       transform: translateZ(0);
+      mix-blend-mode: lighten;
+      position: absolute;
+      top: 50%;
+      margin-top: -100px;
+      z-index: 1;
     }
     .logos {
       white-space: nowrap;
       width: 100%;
       perspective: 900;
-      animation: marquee-left 8s linear infinite forwards;
-      mix-blend-mode: lighten;
-      position: absolute;
-      top: 50%;
-      margin-top: -103px;
-      z-index: 1;
+      animation: marquee-left 50s linear infinite forwards;
     }
 
     .logos span {
