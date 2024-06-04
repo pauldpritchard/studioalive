@@ -66,9 +66,11 @@
     }
 
     #canvas {
+      background: #fff;
+    }
+    .canvas-wrap {
       width: 100%;
       padding-bottom: 342%;
-      background: #fff;
     }
 
     @media screen and (orientation: landscape) {
@@ -100,7 +102,10 @@
 <!--     <video autoplay loop defaultMuted playsinline muted poster="">
       <source src="work/streamline-luxe-mobile.mp4" type="video/mp4">
     </video>
- -->    <canvas id="canvas"></canvas>
+ -->    
+    <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+    </div>
   </div>
   <div class="text-alive">alive</div>
 </div>
