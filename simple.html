@@ -34,6 +34,7 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      display: flex;
     }
     .text-studio, .text-alive {
       font-family: 'Krona One';
@@ -43,13 +44,13 @@
       font-size: 22vw;
     }
     .text-alive {
-      font-size: 28vw;
+      font-size: 26vw;
     }
 
     .examples {
       margin: 0 8vw;
       display: flex;
-      height: 56%;
+      height: 57.5%;
     }
     .examples video {
       width: 100%;
@@ -59,7 +60,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100vh;
       height: 100vh;
+    }
+
+    @media screen and (orientation: landscape) {
+      .wrap {
+        flex-direction: row;
+      }
+      .text-studio {
+        font-size: 20vh;
+      }
+      .text-alive {
+        font-size: 20vh;
+      }
+      .examples {
+        margin: 0 4vh;
+        height: 65%;
+      }
     }
 
   </style>
