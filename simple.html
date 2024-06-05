@@ -94,7 +94,7 @@
 /*   Animation */
 .examples {
   background: #fff;
-  height: 0;
+  height: 10px;
   margin: 0 16.5vw;
   transition: height 0.6s cubic-bezier(0.09, 0.6, 0.58, 1);
 }
@@ -111,8 +111,9 @@
 @media screen and (orientation: landscape) {
   .examples {
     background: #fff;
-    width: 0;
+    width: 10px;
     height: 65%;
+    margin: 0 4vh;
     transition: width 0.6s cubic-bezier(0.09, 0.6, 0.58, 1);
   }
   .examples video {
@@ -150,7 +151,7 @@
 <script>
   setTimeout(function() {
     document.body.classList.add('start-animation');
-  }, 100);
+  }, 1000);
 
 // NOISE
 
