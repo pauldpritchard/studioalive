@@ -50,7 +50,7 @@
     .examples {
       margin: 0 8vw;
       display: flex;
-      height: 64  %;
+      height: 64%;
     }
     .examples video {
       width: 100%;
@@ -91,6 +91,23 @@
       }
     }
 
+/*   Animation */
+.examples {
+  background: #fff;
+  width: 0;
+  transition: width ease 1s;
+}
+.examples video {
+  opacity: 0;
+  transition: opacity ease 0s 1s;
+}
+.start-animation .examples {
+  width: 100%;
+}
+.start-animation .examples video {
+  opacity: 1;
+}
+
   </style>
 </head>
 
@@ -111,6 +128,10 @@
 </div>
 
 <script>
+document.body.classList.add('start-animation');
+
+// NOISE
+
   var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
 
