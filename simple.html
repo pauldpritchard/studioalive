@@ -107,8 +107,10 @@
 /*   Animation */
 @media screen and (orientation: portrait) {
   .examples {
-    background: #fff;
-    height: 16px;
+    background: url(static.gif);
+    background-size: 620px;
+    background-position: center;
+    height: 30px;
     margin: 0 16.5vw;
     transition: height 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 0.9s;
   }
@@ -121,11 +123,14 @@
   }
   .start-animation .examples video {
     opacity: 1;
+    transition-delay: 0;
   }
 }
 @media screen and (orientation: landscape) {
   .examples {
-    background: #fff;
+    background: url(static.gif);
+    background-size: 620px;
+    background-position: center;
     width: 16px;
     margin: 0 4vh;
     transition: width 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 0.9s;
@@ -139,6 +144,7 @@
   }
   .start-animation .examples video {
     opacity: 1;
+    transition-delay: 0;
   }
 }
 
