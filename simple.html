@@ -105,27 +105,28 @@
 }
 
 /*   Animation */
-.examples {
-  background: #fff;
-  height: 16px;
-  margin: 0 16.5vw;
-  transition: height 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 0.9s;
-}
-.examples video {
-  opacity: 0;
-  transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.5s;
-}
-.start-animation .examples {
-  height: 67svh;
-}
-.start-animation .examples video {
-  opacity: 1;
+@media screen and (orientation: portrait) {
+  .examples {
+    background: #fff;
+    height: 16px;
+    margin: 0 16.5vw;
+    transition: height 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 0.9s;
+  }
+  .examples video {
+    opacity: 0;
+    transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.5s;
+  }
+  .start-animation .examples {
+    height: 67svh;
+  }
+  .start-animation .examples video {
+    opacity: 1;
+  }
 }
 @media screen and (orientation: landscape) {
   .examples {
     background: #fff;
     width: 16px;
-    height: 65%;
     margin: 0 4vh;
     transition: width 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 0.9s;
   }
@@ -134,8 +135,7 @@
     transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.5s;
   }
   .start-animation .examples {
-    width: calc(80vh* 0.45);
-    height: 65%;
+    width: calc(75vh* 0.557);
   }
   .start-animation .examples video {
     opacity: 1;
@@ -165,6 +165,9 @@
   setTimeout(function() {
     document.body.classList.add('start-animation');
   }, 1000);
+
+  window.onkeypress = function() { document.body.classList.toggle('start-animation'); };
+ 
 
 // NOISE
 
