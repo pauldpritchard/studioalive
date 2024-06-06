@@ -26,6 +26,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 
   <style>
+
+@font-face {
+    font-family: 'vhs';
+    src: url('vhs_glitch_3_regular-webfont.woff2') format('woff2'),
+         url('vhs_glitch_3_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
     body {
       margin: 0;
       padding: 0;
@@ -123,6 +134,9 @@
   .start-animation .examples video {
     animation: flicker .2s steps(3) forwards 2.8s;
   }
+  .start-animation .text-studio, .start-animation .text-alive {
+    animation: flicker .2s steps(3) forwards 2.8s;
+  }
 }
 @media screen and (orientation: landscape) {
   .examples {
@@ -142,6 +156,9 @@
   .start-animation .examples video {
     animation: flicker .2s steps(3) forwards 2.8s;
   }
+  .start-animation .text-studio, .start-animation .text-alive {
+    animation: flicker .2s steps(3) forwards 2.8s;
+  }
 }
 
 @keyframes flicker {
@@ -157,6 +174,21 @@
   }
   100% {
       opacity: 1;
+  }
+}
+@keyframes flicker-font {
+  0% {
+      font-family: 'Krona One';
+  }
+  33% {
+      font-family: 'VHS';
+  }
+
+  66% {
+      font-family: 'Krona One';
+  }
+  100% {
+      font-family: 'VHS';
   }
 }
 
