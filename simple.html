@@ -49,7 +49,8 @@
       align-items: center;
     }
     .text-studio, .text-alive {
-      font-family: 'Krona One';
+      font-family: 'VHS';
+      text-transform: uppercase;
       letter-spacing: -0.07em;
     }
     .text-studio {
@@ -178,21 +179,20 @@
 }
 @keyframes flicker-font {
   0% {
-      font-family: 'Krona One';
-      text-transform: none;
+      font-family: 'VHS';
+      text-transform: uppercase;
   }
   33% {
-      font-family: 'VHS';
-      text-transform: uppercase;
-  }
-
-  66% {
       font-family: 'Krona One';
       text-transform: none;
   }
-  100% {
+  66% {
       font-family: 'VHS';
       text-transform: uppercase;
+  }
+  100% {
+      font-family: 'Krona One';
+      text-transform: none;
   }
 }
 
