@@ -197,17 +197,32 @@
   height: 100svh;
   z-index: 1;
   position: absolute;
+  gap: 9vw;
+}
+.margin {
+  padding: 9vw;
 }
 .text-help {
-  font-size: 18vw;
+  font-size: 16vw;
+  letter-spacing: -0.07em;
 }
 .buttons {
-
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 7vw;
+  flex: 1;
+  justify-content: flex-end;
 }
 .button {
   background: #000;
   color: #fff;
-  font-size: 10vw;
+  font-size: 8vw;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
 }
 
   </style>
@@ -216,11 +231,13 @@
 <body>
 
 <div class="page-2">
-  <div class="text-help">How can we help you?</div>
-  <div class="buttons">
-    <div class="button">Ecommerce</div>
-    <div class="button">Branding</div>
-    <div class="button">Other...</div>
+  <div class="margin">
+    <div class="text-help">how can we help you?</div>
+    <div class="buttons">
+      <div class="button">ecommerce</div>
+      <div class="button">branding</div>
+      <div class="button">other...</div>
+    </div>
   </div>
 </div>
 
