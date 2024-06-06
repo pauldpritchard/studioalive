@@ -224,6 +224,14 @@
   width: 100%;
   justify-content: center;
 }
+.blink {
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
   </style>
 </head>
@@ -232,7 +240,7 @@
 
 <div class="page-2">
   <div class="margin">
-    <div class="text-help">how can we help you?</div>
+    <div class="text-help">how can we help you?<span class="blink"></span></div>
     <div class="buttons">
       <div class="button">ecommerce</div>
       <div class="button">branding</div>
