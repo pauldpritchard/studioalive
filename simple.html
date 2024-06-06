@@ -228,12 +228,16 @@
   align-items: center;
   flex: 1;
   width: 100%;
-  justify-content: center;
+/*  justify-content: center;*/
   max-height: 26vw;
 }
-.button .blink {
-  margin-left: 7vw;
-  transform: scaleX(0.6);
+.button .triangle {
+  margin: 0 2vw 0 7vw;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid #fff;
 }
 .blink {
   animation: blink 1s steps(1) infinite;
@@ -268,9 +272,9 @@
   <div class="margin">
     <div class="text-help">how can we help you?</div>
     <div class="buttons">
-      <div class="button"><span class="blink">▶ &nbsp;</span>Ecommerce</div>
-      <div class="button"><span class="blink">▶ &nbsp;</span>Branding</div>
-      <div class="button"><span class="blink">▶ &nbsp;</span>Other</div>
+      <div class="button"><span class="blink"><div class="triangle"></div></span>Ecommerce</div>
+      <div class="button"><span class="blink"><div class="triangle"></div></span>Branding</div>
+      <div class="button"><span class="blink"><div class="triangle"></div></span>Other</div>
     </div>
   </div>
 </div>
