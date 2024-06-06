@@ -91,16 +91,29 @@
       }
     }
 
+/*  Text animation  */
+.text-studio, .text-alive {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.start-animation .text-studio {
+  opacity: 1;
+}
+.start-animation .text-alive {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+
 /*   Animation */
 .examples {
   background: #fff;
   height: 10px;
   margin: 0 16.5vw;
-  transition: height 0.6s cubic-bezier(0.09, 0.6, 0.58, 1);
+  transition: height 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 1.2s;
 }
 .examples video {
   opacity: 0;
-  transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 0.6s;
+  transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.8s;
 }
 .start-animation .examples {
   height: 67svh;
@@ -114,11 +127,11 @@
     width: 10px;
     height: 65%;
     margin: 0 4vh;
-    transition: width 0.6s cubic-bezier(0.09, 0.6, 0.58, 1);
+    transition: width 0.6s cubic-bezier(0.09, 0.6, 0.58, 1) 1.2s;
   }
   .examples video {
     opacity: 0;
-    transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 0.6s;
+    transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.8s;
   }
   .start-animation .examples {
     width: calc(80vh* 0.45);
