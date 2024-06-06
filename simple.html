@@ -116,14 +116,12 @@
   }
   .examples video {
     opacity: 0;
-    transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.5s;
   }
   .start-animation .examples {
     height: 67svh;
   }
   .start-animation .examples video {
-    opacity: 1;
-    transition-delay: 0;
+    animation: flicker .2s steps(3) forwards 1.5s;
   }
 }
 @media screen and (orientation: landscape) {
@@ -137,14 +135,28 @@
   }
   .examples video {
     opacity: 0;
-    transition: opacity 0s cubic-bezier(0.09, 0.6, 0.58, 1) 1.5s;
   }
   .start-animation .examples {
     width: calc(75vh* 0.557);
   }
   .start-animation .examples video {
-    opacity: 1;
-    transition-delay: 0;
+    animation: flicker .2s steps(3) forwards 1.5s;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  33% {
+      opacity: 1;
+  }
+
+  66% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
 
