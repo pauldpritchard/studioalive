@@ -125,6 +125,7 @@
   .start-animation .examples {
     width: auto;
     height: 67svh;
+    animation: flicker-bg .2s steps(3) forwards 2.8s;
   }
   .start-animation .examples video {
     animation: flicker .2s steps(3) forwards 2.8s;
@@ -146,6 +147,7 @@
   .start-animation .examples {
     width: calc(75vh* 0.557);
     height: 75vh;
+    animation: flicker-bg .2s steps(3) forwards 2.8s;
   }
   .start-animation .examples video {
     animation: flicker .2s steps(3) forwards 2.8s;
@@ -165,6 +167,21 @@
   }
   100% {
       opacity: 1;
+  }
+}
+@keyframes flicker-bg {
+  0% {
+    background: url(static.gif);
+  }
+  33% {
+      background: none;
+  }
+
+  66% {
+    background: url(static.gif);
+  }
+  100% {
+      background: none;
   }
 }
 
