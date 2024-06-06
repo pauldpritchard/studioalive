@@ -37,9 +37,9 @@
       overflow: hidden;
       display: flex;
       align-items: center;
+      font-family: 'Krona One';
     }
     .text-studio, .text-alive {
-      font-family: 'Krona One';
       letter-spacing: -0.07em;
     }
     .text-studio {
@@ -185,10 +185,44 @@
   }
 }
 
+/* PAGE 2  */
+
+.page-2 {
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100svh;
+  z-index: 1;
+  position: absolute;
+}
+.text-help {
+  font-size: 18vw;
+}
+.buttons {
+
+}
+.button {
+  background: #000;
+  color: #fff;
+  font-size: 10vw;
+}
+
   </style>
 </head>
 
 <body>
+
+<div class="page-2">
+  <div class="text-help">How can we help you?</div>
+  <div class="buttons">
+    <div class="button">Ecommerce</div>
+    <div class="button">Branding</div>
+    <div class="button">Other...</div>
+  </div>
+</div>
 
 <div class="wrap">
   <div class="text-studio">studio</div>
