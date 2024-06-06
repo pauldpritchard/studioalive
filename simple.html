@@ -197,6 +197,10 @@
   height: 100svh;
   z-index: 1;
   position: absolute;
+  display: none;
+}
+.show-page-2 .page-2 {
+  display: block;
 }
 .margin {
   padding: 9vw;
@@ -273,6 +277,10 @@
   }, 1000);
 
   window.onkeypress = function() { document.body.classList.toggle('start-animation'); };
+
+  window.ontouchstart = function() {
+    document.body.classList.add('show-page-2');
+  }
  
 
 // NOISE
